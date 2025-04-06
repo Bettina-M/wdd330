@@ -1,0 +1,66 @@
+@media screen and (max-width: 768px) {
+    nav{
+        display:block;
+        overflow: hidden;
+        max-height: 0;
+        text-align: center;
+        padding: 15px;
+        transition: max-height 0.5s ease-in-out;
+    }
+
+    nav.open{
+        display: block;
+        max-height: 300px;
+    }
+
+    nav a{
+        display: flex;
+        flex-direction: column;
+        top:100%;
+        width: 100%;
+        padding: 1rem;
+        text-decoration: none;
+        
+    }
+
+    #menu-btn{
+        position:absolute;
+        background-color: transparent;
+        top: 25px;
+        right: 10px;
+        padding: 10px;
+        font-size: 1.5rem;
+        cursor:pointer;
+    }
+
+    #menu-btn::before {
+        content: "☰"; /* Hamburger menu icon */
+    }
+
+    #menu.open #menu-btn::before {
+        content: "❎"; /* Close button */
+    }
+    #logo img{
+        width:100px;
+        height:auto;
+        margin-left: 10px;
+    }
+
+    #cart{
+        position: absolute;
+        top: 35px;
+        right:75px;
+    }
+
+    footer div{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        line-height: 10px;
+        background-color: var(--neutral-color);
+        max-width: 100%;
+        
+    }
+
+    
+}

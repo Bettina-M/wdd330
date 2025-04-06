@@ -1,0 +1,199 @@
+:root{
+    --primary-color:#A9BCD0;
+    --secondary-color:#373F51;
+    --neutral-color:#D8DBE2;
+    --primary-font:'Roboto', 'Courier New', Courier, monospace;
+    --secondary-font: 'Lato',Times, serif;
+}
+@media screen and (min-width: 768px){
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    font-family: var(--primary-font);
+}
+#menu{
+    display: flex;
+    align-items:center;
+    gap: 30px;
+    
+    
+}
+nav a{
+    padding: 10px 50px;
+    text-decoration: none;
+    font-weight: bold;
+    color:black;
+    
+}
+
+#logo{
+    position: relative;
+}
+#cart-img{
+    position: relative;
+}
+
+#cart-count {
+    background-color: red;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    position: absolute;
+    top: 90px;
+    right: 20px;
+}
+
+#menu-btn{
+    display: none;
+}
+
+
+a:hover{
+    background-color:var(--neutral-color);
+    border-radius: 20px;
+}
+
+nav a:nth-child(4){
+    padding-top: 5px;
+}
+
+#hero{
+    position: relative;
+    width: 100%;
+    margin-top: -256px;
+    z-index: -1;
+}
+
+#intro{
+    font-size: 2.5em;
+    position: relative;
+    top: -900px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    line-height: 2.5em;
+    font-family: "Lato", sans-serif;
+}
+
+#intro button{
+    font-size: 1em;
+    background-color: black;
+    color:white;
+    padding: 5px;
+    border-radius: 15px;
+    font-family: "Lato", sans-serif;
+    font-weight: bold;
+
+}
+
+footer{
+    display: flex;
+    justify-content:space-around;
+    align-items: flex-start;
+    gap: 450px;
+    background-color: var(--neutral-color);
+    
+    
+}
+footer div{
+    margin: 50px;
+   
+}
+
+#footer1{
+    padding: 20px;
+    line-height: 50px;
+}
+
+#footer2{
+    padding: 30px;
+    line-height: 40px;
+}
+
+footer img:hover{
+    background-color: var(--primary-color);
+}
+}
+
+/* Index.html*/
+
+#categories-container{
+    display: flex;
+    justify-content: space-between;
+    margin-top: -150px;
+    margin-bottom: 50px;
+    
+}
+
+#categories-container img{
+    height: 300px;
+}
+
+#categories-container button{
+    text-align: center;
+    padding: 5px;
+    border-radius: 2px;
+    font-family: var(--secondary-font);
+    font-size: larger;
+    background-color: var(--secondary-color);
+    color:white;
+
+}
+/*shop.html*/
+
+#shop-header{
+    background-color: var(--neutral-color);
+}
+#product-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;        /* space between cards */
+    justify-content: center; /* or space-between / flex-start */
+    padding: 20px;
+    
+}
+
+#product-container div {
+    flex: 0 1 200px;
+    text-align: center;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+#product-container button{
+    text-align: center;
+    padding: 5px;
+    border-radius: 2px;
+    font-family: var(--secondary-font);
+    font-size: larger;
+    background-color: var(--secondary-color);
+    color:white;
+    width: 200px;
+}
+
+/*contact-us page*/
+#contact-header{
+    z-index: 1000;
+}
+#contact-hero img{
+    position: relative;
+    margin-top: -400px;
+    z-index: -1;
+    
+}
