@@ -20,16 +20,27 @@
 <body>
     <header class="main-header" id="contact-header"></header>
     <main>
-        <div id="contact-hero">
-            <picture>
-                <source media="(max-width:600px)" srcset="/assets/images/form_pic_small.webp">
-                <source media="(max-width:1024px)" srcset="/assets/images/form_pic_medium.webp">
-                <source media="(max-width:1920px)" srcset="/assets/images/form_pic_large.webp">
-                <img src="assets/images/form_pic_default.jpg">
-            </picture>
-        </div>
+        <div id="contact-area">
+            
+            <h2>Contact Us — Complaints & Refunds</h2>
+            <form id="contact-form">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required /><br>
 
-        
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required /><br>
+
+                <label for="order-id">Order ID (if applicable)</label>
+                <input type="text" id="order-id" name="order-id" /><br>
+
+                <label for="message">Complaint / Refund Request</label>
+                <textarea id="message" name="message" rows="5" required></textarea><br>
+
+                <button type="submit">Submit</button>
+            </form>
+            <p id="response-message"></p> 
+             
+        </div>  
     </main>
     <footer class="main-footer"></footer>
 </body>

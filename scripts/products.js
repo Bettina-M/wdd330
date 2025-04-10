@@ -1,6 +1,7 @@
-import { loadHeaderFooter } from "./utils.mjs";
 
-loadHeaderFooter();
+import { loadHeaderFooter } from "./utils.mjs";
+//import { updateCartIcon } from "./cart.js"; //
+
 
 //function to get category from the url
 function getCategoryUrl(){
@@ -45,11 +46,11 @@ function showProducts(products){
             
             <h3>${product.title}</h3>
             
-            <h4>$${product.price}
+            <h4>$${product.price}</h4>
             
-            <a href="cart.html">
-            </h4 class="addbtn" data-id="${product.id}"> <button>Add to Cart</button>
-            </a>`
+            <button class="addbtn" data-id="${product.id}"> Add to Cart</button>
+            
+            <p>Quantity:1</p>`;
             
             container.appendChild(card);         
     });
@@ -65,6 +66,32 @@ function showProducts(products){
 }
 
 
-document.addEventListener("DOMContentLoaded", loadCategory);
+
+
+async function addToCart(productId){
+    const response = await fetch(`https://fakestoreapi.com/products/${productId}`);
+    const product = await response.json();
+
+    let cart = JSON.parse(localStorage.getItem("cart")) || []; //fetch cart items from local storage
+    const foundItem = cart.find(item => item.id === product.id); //if similar item is selected thats already in cart, update quantity
+
+    if (foundItem){
+        foundItem.quantity +=1;
+    }else{
+    product.quantity = 1; 
+    cart.push(product);
+    }
+
+    localStorage.setItem("cart",JSON.stringify(cart));
+    alert("Added to cart!");
+
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    loadHeaderFooter().then(() => {
+        //updateCartIcon(); // Ensure cart count updates
+    });
+    loadCategory(); // Load and display category products
+});
 
 

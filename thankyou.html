@@ -7,26 +7,29 @@
     <meta name="description" content="One stop shop for all your wardrobe needs">
     <meta property="og:title" content="UrbanPick">
     <meta property="og:type" content="website">
-    <meta property="og:URL" content="#"> <!--Finish here-------------->
-    <meta property="og:image" content="#"> <!--Finish here-------------->
+    <meta property="og:URL" content="https://urbanpick.netlify.app/"> <!--Finish here-------------->
+    <meta property="og:image" content=""> <!--Finish here-------------->
     <meta property="og:description" content="Your one stop shop for all your wardrobe needs">
     <link rel="stylesheet" href="styles/large.css">
     <link rel="stylesheet" href="styles/small.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <title>UrbanPick|Cart</title>
-    <script src="scripts/cart.js" type="module"></script>
+    <title>UrbanPick|Home</title>
+    <script src="scripts/thankyou.js" type="module"></script>
 </head>
 <body>
-    <header class="main-header" id="cart-header"></header>
-    <main>
-        <h1 id="cart-heading">Shopping Cart</h1>
-        <div id="cart-products"></div>
-        <div id="cart-total"></div>
-        <a href="checkout.html"><button id="buy-btn">PROCEED TO BUY</button>
-        </a>
-    </main>
+    <header class="main-header"></header>
+    <section id="contact-body">
+        <div id="delivery-pic">
+            <picture>
+                <source media="(max-width:400px)" srcset="/assets/images/deliverypic_small.webp">
+                <source media="(max-width:900px)" srcset="/assets/images/deliverypic_medium.webp">
+                <img src="assets/images/deliverypic.jpg" width="500px">
+            </picture>
+        </div>
+        <div id="form-details"></div>
+    </section>
     <footer class="main-footer"></footer>
 </body>
 </html>

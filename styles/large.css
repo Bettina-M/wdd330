@@ -73,7 +73,8 @@ nav a:nth-child(4){
 
 #hero{
     position: relative;
-    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
     margin-top: -256px;
     z-index: -1;
 }
@@ -81,6 +82,7 @@ nav a:nth-child(4){
 #intro{
     font-size: 2.5em;
     position: relative;
+    
     top: -900px;
     text-align: center;
     color: white;
@@ -134,8 +136,7 @@ footer img:hover{
 #categories-container{
     display: flex;
     justify-content: space-between;
-    margin-top: -150px;
-    margin-bottom: 50px;
+    margin:-150px auto 50px;
     
 }
 
@@ -155,7 +156,7 @@ footer img:hover{
 }
 /*shop.html*/
 
-#shop-header{
+#shop-header, #cart-header{
     background-color: var(--neutral-color);
 }
 #product-container{
@@ -164,7 +165,7 @@ footer img:hover{
     gap: 40px;        /* space between cards */
     justify-content: center; /* or space-between / flex-start */
     padding: 20px;
-    
+
 }
 
 #product-container div {
@@ -187,13 +188,211 @@ footer img:hover{
     width: 200px;
 }
 
-/*contact-us page*/
-#contact-header{
-    z-index: 1000;
+/*cart page*/
+#cart-heading{
+    text-align: center;
+    font-family: var(--secondary-font);
+    padding: 10px;
+    color: var(--secondary-color);
 }
-#contact-hero img{
-    position: relative;
-    margin-top: -400px;
-    z-index: -1;
+
+
+#cart-products{
+    padding: 0rem 1rem;
+    margin: 10px;
     
 }
+
+#cart-products div {
+    margin: 0 auto;
+    max-width: 40%;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#cart-total{
+    font-size: larger;
+    text-align: center;
+    margin: 10px;
+    font-family: var(--secondary-font);
+}
+
+#buy-btn,#cart-products div button  {
+    width: 200px;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 0.2rem;
+    text-align: center;
+    font-family: var(--secondary-font);
+    background-color: var(--primary-color);
+}
+
+/* checkout page*/
+#checkout-header{
+    background-color: var(--neutral-color);
+}
+#checkout-h2{
+    font-family: var(--primary-font);
+    text-align: center;
+    text-decoration: underline;
+    margin-bottom: 20px;
+    
+    
+}
+
+#area1{
+    background-color: rgb(252, 252, 252);
+    max-width: 70%;
+    margin-bottom: 20px;
+    border-radius: 50px;  
+}
+#area1 h3{
+    text-align: center;
+    font-family: var(--primary-font);
+    font-size: larger;
+    padding: 10px;
+}
+
+#cart-summary{
+    text-align: center;
+    padding: 5px;
+    font-family: var(--secondary-font);
+}
+#receipt-heading{
+    font-family: var(--primary-font);
+}
+
+#checkout-section{
+    display: grid;
+    grid-template-columns: 0.5fr 1fr;
+    column-gap: 10px;
+    justify-content: space-between;
+    margin: 20px;
+    
+}
+form{
+    background-color: rgb(252, 252, 252);
+    border-radius: 15px;
+    margin-bottom: 10px;
+}
+
+#payment legend{
+    margin-top: 50px;
+    
+}
+
+form legend{
+    font-size: larger;
+    font-weight: bold;
+    margin: 5px;
+    font-family: var(--primary-font);
+    
+}
+
+form input{
+    margin: 20px 0;
+    padding: 7px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.94);
+  
+}
+
+input:focus {
+    background-color: var(--neutral-color);
+}
+
+select{
+    width: 20%;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+form label, form p,a{
+    font-family: var(--secondary-font);
+    padding: 5px;
+}
+
+.placeOrder-btn{
+    background-color: var(--primary-color);
+    font-size: larger;
+    padding: 7px;
+    border-radius: 5px;
+    font-family: var(--secondary-font);
+    width: 20%;
+    text-align: center;
+    margin-left: 300px;
+    margin-bottom: 10px;
+    font-weight: bolder;
+}
+
+#body-area{
+    background-image: url("https://images.pexels.com/photos/6214394/pexels-photo-6214394.jpeg?auto=compress&cs=tinysrgb&w=600");
+    margin-bottom: -20px;
+}
+
+/*Thankyou page*/
+ #contact-body{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 100px;
+ }
+
+ #form-details h3{
+    text-align: center;
+    font-family: var(--primary-font);
+    font-size: 2.5em;
+    padding: 20px;
+ }
+
+ #form-details p{
+    text-align: center;
+    font-family: var(--secondary-font);
+    font-size: 1.5em;
+    padding: 10px;
+ }
+/*contact-us page*/
+
+#contact-header{
+    background-color: var(--neutral-color);
+}
+#contact-area{
+    background-color: #e7edf5;
+    max-width: 50%;
+    margin: 30px auto;
+    border-radius: 50px;
+    text-align: center;
+    
+    
+}
+#contact-form{
+    background-color: transparent;
+    text-align:left;
+    padding: 10px;
+    
+}
+#contact-form button{
+   padding: 10px;
+   background-color: #D8DBE2;
+   font-family: var(--secondary-font);
+   width: 30%;
+   margin: 10 0 0 20px;
+}
+
+#contact-form input, textarea{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    width: 50%;
+    padding: 15px;
+   
+}
+
+#response-message{
+    font-family: var(--secondary-font);
+    font-size: larger;
+    padding: 10px;
+}
+
+
