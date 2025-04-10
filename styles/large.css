@@ -5,6 +5,14 @@
     --primary-font:'Roboto', 'Courier New', Courier, monospace;
     --secondary-font: 'Lato',Times, serif;
 }
+nav a:hover{
+    background-color: #A9BCD0;
+}
+
+button:hover{
+    transform: scale(1.1);
+    transition: ease-in-out 0.5s;
+}
 @media screen and (min-width: 768px){
 *{
     margin:0;
@@ -227,6 +235,18 @@ footer img:hover{
     text-align: center;
     font-family: var(--secondary-font);
     background-color: var(--primary-color);
+}
+
+#checkout-btn{
+    width: 20%;
+    padding: 10px;
+    font-family: var(--secondary-font);
+    background-color: var(--primary-color);
+    border-radius: 5px;
+    margin: 8px;
+   
+    font-size: larger;
+    font-weight: bolder;
 }
 
 /* checkout page*/

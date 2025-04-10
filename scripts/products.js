@@ -48,9 +48,7 @@ function showProducts(products){
             
             <h4>$${product.price}</h4>
             
-            <button class="addbtn" data-id="${product.id}"> Add to Cart</button>
-            
-            <p>Quantity:1</p>`;
+            <button class="addbtn" data-id="${product.id}"> Add to Cart</button>`;
             
             container.appendChild(card);         
     });

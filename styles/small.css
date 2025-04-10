@@ -144,6 +144,11 @@
         font-weight: 900;
     }
 
+    #checkout-btn{
+        width: 150px;
+        margin-left: 140px;
+    }
+
     /*Checkout page*/
     #body-area{
         margin-top: -20px;
@@ -182,6 +187,10 @@
   }
 
   /*Thank you page*/
+  #delivery-pic img{
+    overflow-x: hidden;
+    max-width: 100%;
+  }
   #contact-body{
     display: block;
     margin: 0 auto;
